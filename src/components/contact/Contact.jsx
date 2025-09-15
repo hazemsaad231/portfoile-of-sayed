@@ -31,7 +31,7 @@ function Contact() {
 
   <li className="flex items-center gap-2 hover:border-b p-2">
   <FaPhoneVolume size={30} className="text-white" />
-  <a href="tel:+201012345678" className="text-white">01126544770</a>
+  <a href="tel:+20112544770" className="text-white">01126544770</a>
   </li>
 
   <li className="flex items-center gap-1 hover:border-b p-2">
