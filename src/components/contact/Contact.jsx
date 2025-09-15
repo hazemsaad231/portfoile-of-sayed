@@ -36,7 +36,7 @@ function Contact() {
 
   <li className="flex items-center gap-1 hover:border-b p-2">
     <FaSquareWhatsapp size={35} className="text-white" />
-  <a href="https://wa.me/201012345678" className="text-white">Whatsapp</a>
+  <a href="https://wa.me/201099076093" className="text-white">Whatsapp</a>
   </li>
 </ul>
   </div>

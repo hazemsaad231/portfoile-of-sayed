@@ -25,7 +25,7 @@ const NavBar = () => {
 
 
 <div>
-<h1 className="text-xl lg:text-3xl text-center" style={{fontFamily: "cursive"}}>
+<h1 className="text-xl lg:text-3xl text-center">
   S<span className='text-blue-500 relative right-1'> G</span>
   <h5 className="text-sm text-gray-200">Sayed Elgohary</h5>
   </h1>
