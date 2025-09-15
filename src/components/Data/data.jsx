@@ -119,17 +119,17 @@ export default webApps;
 export const mobileApps = [
 
     {
-        id: 5,
+        id: 4,
         title:"Healthcare App",
-        img: project4,
+        img: project6,
         link:"https://play.google.com/store/apps/details?id=com.promina.drgermeen&pli=1",
         description: `Digital platform for patient care services including records management, appointments, and e-prescriptions.
 `
     },
     {
-        id: 4,
+        id: 5,
         title:"Eghsley Budget Tracker",
-        img: project6,
+        img: project4,
         link:"https://play.google.com/store/apps/details?id=com.puresoft.e3sely&pli=1",
      description: `Comprehensive budget management app for tracking expenses, income, debts, and financial planning.
 `
