@@ -86,7 +86,7 @@ const webApps = [
      {
         id: 1,
         title:"ERP Construction System",
-        img:project1,
+        img:project3,
         link: "https://makramallah.org/",
         description: `Enterprise Resource Planning system tailored for construction industry with Laravel backend and JavaScript frontend.
 
@@ -95,7 +95,7 @@ const webApps = [
     {
         id: 2,
         title:"Elmasry Motors",
-        img: project2,
+        img: project1,
         link: "https://elmasry-motors.com/",
         description: `Automotive trading platform with Laravel backend, Livewire for interactivity, and Metronic UI.
     `,
@@ -105,7 +105,7 @@ const webApps = [
     {
         id: 3,
         title:"Octobios B2B",
-        img: project3,
+        img: project2,
         link:"https://octopios.masool.net/",
         description:`Comprehensive B2B E-commerce platform connecting traders with vendors, with product management and analytics.`,
     },
@@ -129,7 +129,7 @@ export const mobileApps = [
     {
         id: 5,
         title:"Eghsley Budget Tracker",
-        img: project5,
+        img: project6,
         link:"https://play.google.com/store/apps/details?id=com.puresoft.e3sely&pli=1",
      description: `Comprehensive budget management app for tracking expenses, income, debts, and financial planning.
 `
@@ -137,7 +137,7 @@ export const mobileApps = [
     {
         id: 6,
         title:"Manasik Apps",
-        img: project6,
+        img: project5,
         link:"https://play.google.com/store/apps/details?id=com.puresoft.manasik",
         description: `Comprehensive guides for Hajj and Umrah pilgrims with step-by-step instructions and prayers.
 `
@@ -159,7 +159,7 @@ export const experience = [
     ]
   },
   {
-    company: "Amit",
+    company: "Amit Learning",
     role: "Back End Developer",
     Date: "Jul 2023-Dec 2024",
     text: [

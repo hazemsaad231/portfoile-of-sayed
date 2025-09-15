@@ -35,8 +35,7 @@ const About = () => {
         <div className='flex flex-col justify-center items-center py-20' id='about'>
        
           <div className='px-4'>
-          <h1 
-  className="bg-gradient-to-r from-primary to-white bg-clip-text text-transparent text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold inline-block"
+          <h1 className="text-center bg-gradient-to-r from-primary to-white bg-clip-text text-transparent text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold inline-block"
   style={{ WebkitTextFillColor: "transparent" }}
 >
   About Me <span className='w-4 h-4 bg-primary inline-block rounded-full'></span>
