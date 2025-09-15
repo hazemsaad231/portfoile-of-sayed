@@ -9,7 +9,7 @@ function Contact() {
 
   return (
     <>
-    <div id="contact" className='px-8 pb-8'>
+    <div id="contact" className='px-1 pb-8'>
       <div className="flex flex-col justify-center items-center gap-2">
 
 <div className="text-center">
@@ -50,7 +50,7 @@ function Contact() {
           </ul>
           
         </div>
-<p className="mt-4 text-md text-center">Copyright © 2025 Sayed Elgohary. All Rights Reserved.</p>
+<p className="mt-4 text-sm text-center">Copyright © 2025 Sayed Elgohary. All Rights Reserved.</p>
         </div>
       </div>
     </>

@@ -1,118 +1,175 @@
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { GraduationCap, Calendar, MapPin } from 'lucide-react';
 import { skills } from '../Data/data';
 
 
 
+const education = [
+  {
+    degree: "Bachelor's in Computer Science",
+    institution: "University of Menoufia", 
+    year: "2020 - 2024",
+    description: "Focused on software engineering, algorithms, and database systems"
+  }
+];
 
-const About = () => {
+export default  function About() {
+  const [activeTab, setActiveTab] = useState('skills');
+  
+  const tabs = [
+    { id: 'skills', label: 'Skills' },
+    { id: 'education', label: 'Education' }
+  ];
 
-
-
-      const [active, setActive] = useState('skills');
-      const [viewSkills, setViewSkills] = useState(true);
-      const [viewEducation, setViewEducation] = useState(false);
-
-      const toggleView = () => {
-        setViewSkills(true);
-        setViewEducation(false);
-      }
-
-      const toggleView2 = () => {
-        setViewEducation(true);
-        setViewSkills(false);
-      }
-
-
-      const toggleActive = (e) => {
-        setActive(e);
-        
-      }
-
-    
-    return (
-        <>
-        <div className='flex flex-col justify-center items-center py-20' id='about'>
-       
-          <div className='px-4'>
-          <h1 className="text-center bg-gradient-to-r from-primary to-white bg-clip-text text-transparent text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold inline-block"
-  style={{ WebkitTextFillColor: "transparent" }}
->
+  return (
+    <section className="min-h-screen py-20" id="about">
+      <div className="mx-auto px-4">
+        {/* Header */}
+        <motion.div 
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h1 
+   className="bg-gradient-to-r from-primary to-white bg-clip-text text-transparent text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold inline-block"
+   style={{ WebkitTextFillColor: "transparent" }}>
   About Me <span className='w-4 h-4 bg-primary inline-block rounded-full'></span>
-</h1>
-            
-            <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row gap-6 sm:gap-6 md:gap-10 lg:gap-10 xl:gap-12'
-             >
-          <p className="text-gray-300 w-[100%] sm:w-[100%] md:w-[60%] lg:w-[60%] xl:w-[600px] mt-4 text-lg z-1">
-  I'm Sayed, a backend developer specialized in Laravel, with experience in building secure, scalable, and high performance server side applications. 
-  I have worked on developing robust APIs, authentication systems, and dynamic web applications that power modern front-end experiences.
-  <p className='mt-2'>
-    I focus on optimizing databases, ensuring application security, and enhancing overall system performance. Whether it's collaborating on a small project 
-    or architecting a large scale application, I bring dedication and problem-solving skills to every task.
-  </p>
-</p>
+  </h1>
+        </motion.div>
 
-
-            <div>
-            <ul className='flex gap-x-4 mt-5 text-xl text-gray-300 cursor-pointer relative top-2 '>
-            <li 
-     onClick={() => {
-       toggleActive('skills');
-      toggleView();
-  }} 
-  className={`text-2xl font-bold relative cursor-pointer transition-all duration-700 ease-in-out 
-    ${active === 'skills' ? 'text-primary' : 'text-gray-300'}
-  `}
->
-  Skills
-  <span className={`absolute left-0 -bottom-1 h-[2px] bg-primary transition-all duration-700 ease-in-out 
-    ${active === 'skills' ? 'w-full' : 'w-0'}`}>
-  </span>
-</li>
-  <li onClick={()=>{toggleActive('education');
-    toggleView2()}} className={`text-2xl font-bold  relative cursor-pointer transition-all duration-700 ease-in-out
-     ${active==='education' ? 'text-primary' : 'text-gray-300'}`}>
-      Education <span
-   className={`absolute left-0 -bottom-1 h-[2px] bg-primary transition-all duration-700 ease-in-out
-    ${active==='education' ? 'w-full' : 'w-0'}`}></span></li>
-            </ul>
-
-
-            <div className='h-80 mt-10 text-gray-300 cursor-pointer text-xl'>
-            {viewSkills &&
-            <div className='grid grid-cols-2 w-64 gap-1'>
-            {skills.map((item, index) => (
-              <ul key={index}>
-                <li className='bg-primary text-white px-2 m-1 w-max rounded-full hover:bg-white hover:text-primary'>{item}</li>
-               
-                </ul>
-            ))}
+        <div className="flex flex-col justify-center items-center gap-10">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-6"
+          >
+            <div className="prose prose-lg text-muted-foreground leading-relaxed">
+              <p>
+                I'm <span className="text-primary font-semibold">Sayed</span>, a backend developer specialized in Laravel, 
+                with experience in building secure, scalable, and high performance server side applications.
+              </p>
+              <p>
+                I have worked on developing robust APIs, authentication systems, and dynamic web applications 
+                that power modern front-end experiences.
+              </p>
+              <p>
+                I focus on optimizing databases, ensuring application security, and enhancing overall system performance.
+              </p>
             </div>
-              }
-              {viewEducation &&
-              <ul className='grid grid-cols-1 gap-3'>
-                <li className='bg-primary text-white px-2 w-max rounded-full hover:bg-white hover:text-primary'>Bachelor's in Computer Science</li>
-                <li className='bg-primary text-white px-2 w-max rounded-full hover:bg-white hover:text-primary'>university of Menoufia</li>
-              </ul>
-              }
-            </div>
-          
-            </div>
-          
-            
-           
-       
+          </motion.div>
 
-
-            </div>
-         
-            </div>
-        
+          {/* Skills & Education Section with Tab Navigation */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="space-y-8"
+          >
+            {/* Tab Navigation */}
+            <div className="flex gap-8">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`relative text-xl font-semibold cursor-pointer transition-all duration-300 ease-in-out pb-2 ${
+                    activeTab === tab.id ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  {tab.label}
+                  {activeTab === tab.id && (
+                    <motion.div
+                      layoutId="activeTabIndicator"
+                      className="absolute left-0 bottom-0 h-0.5 w-full bg-primary"
+                      initial={false}
+                      transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                    />
+                  )}
+                </button>
+              ))}
             </div>
 
-        </>
-    )
+            {/* Tab Content */}
+            <div className="min-h-[300px]">
+              <AnimatePresence mode="wait">
+                {activeTab === 'skills' && (
+                  <motion.div
+                    key="skills"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3 }}
+                    className="flex flex-wrap gap-3"
+                  >
+                    {skills.map((skill, index) => (
+                      <motion.div
+                        key={skill}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: index * 0.05 }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="bg-primary text-primary-foreground px-4 py-2 rounded-full hover-elevate cursor-pointer select-none transition-all duration-200"
+                      >
+                        <span className="font-medium text-sm">{skill}</span>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
+
+                {activeTab === 'education' && (
+                  <motion.div
+                    key="education"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3 }}
+                    className="space-y-6"
+                  >
+                    {education.map((edu, index) => (
+                      <motion.div
+                        key={edu.degree}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                        className="bg-card rounded-lg p-6 border border-card-border hover-elevate"
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className="bg-primary/10 p-3 rounded-lg">
+                            <GraduationCap className="w-6 h-6 text-primary" />
+                          </div>
+                          
+                          <div className="flex-1">
+                            <h3 className="font-semibold text-lg text-card-foreground mb-1">
+                              {edu.degree}
+                            </h3>
+                            
+                            <div className="flex items-center gap-2 text-muted-foreground mb-2">
+                              <MapPin className="w-4 h-4" />
+                              <span className="text-sm">{edu.institution}</span>
+                            </div>
+                            
+                            <div className="flex items-center gap-2 text-muted-foreground mb-3">
+                              <Calendar className="w-4 h-4" />
+                              <span className="text-sm">{edu.year}</span>
+                            </div>
+                            
+                            <p className="text-muted-foreground text-sm leading-relaxed">
+                              {edu.description}
+                            </p>
+                          </div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 }
-
-export default About
-
