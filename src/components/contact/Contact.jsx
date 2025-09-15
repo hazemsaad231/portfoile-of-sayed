@@ -26,7 +26,7 @@ function Contact() {
 
   <li className="flex items-center gap-1 hover:border-b p-2">
   <CgMail size={30} className="text-white" />
-  <a href="mailto:0C7lF@example.com" className="text-white">elgoharysayed410@gmail.com</a>
+  <a href="mailto:elgoharysayed410@gmail" className="text-white">elgoharysayed410@gmail.com</a>
   </li>
 
   <li className="flex items-center gap-2 hover:border-b p-2">
