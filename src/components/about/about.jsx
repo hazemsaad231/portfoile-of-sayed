@@ -24,7 +24,7 @@ export default  function About() {
 
   return (
     <section className="py-28" id="about">
-      <div className="mx-auto px-4">
+      <div className="mx-auto px-3">
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: -30 }}
@@ -39,7 +39,7 @@ export default  function About() {
   </h1>
         </motion.div>
 
-        <div className="flex flex-col justify-center items-center gap-4">
+        <div className="flex flex-col justify-center items-center gap-3">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -61,20 +61,19 @@ export default  function About() {
             </div>
           </motion.div>
 
-          {/* Skills & Education Section with Tab Navigation */}
+          {/* Skills & Education */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="space-y-8"
+            className="space-y-8 flex flex-col items-center"
           >
-            {/* Tab Navigation */}
-            <div className="flex gap-8">
+            <div className="flex gap-4">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`relative text-xl font-semibold cursor-pointer transition-all duration-300 ease-in-out pb-2 ${
+                  className={`px-2 relative w-32 text-xl font-semibold cursor-pointer transition-all duration-300 ease-in-out pb-2 ${
                     activeTab === tab.id ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
                   }`}
                 >
@@ -92,7 +91,7 @@ export default  function About() {
             </div>
 
             {/* Tab Content */}
-            <div className="min-h-[300px]">
+            <div>
               <AnimatePresence mode="wait">
                 {activeTab === 'skills' && (
                   <motion.div
@@ -122,19 +121,11 @@ export default  function About() {
                 {activeTab === 'education' && (
                   <motion.div
                     key="education"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.3 }}
-                    className="space-y-6"
                   >
-                    {education.map((edu, index) => (
+                    {education.map((edu) => (
                       <motion.div
                         key={edu.degree}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: index * 0.1 }}
-                        className="bg-card rounded-lg p-6 border border-card-border hover-elevate"
+                        className="bg-card rounded-lg p-6 border border-card-border"
                       >
                         <div className="flex items-start gap-4">
                           <div className="bg-primary/10 p-3 rounded-lg">

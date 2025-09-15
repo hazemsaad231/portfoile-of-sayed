@@ -22,7 +22,7 @@ function Contact() {
 
   <div className="bg-[#1e1e1e] border border-[#444444] p-1 md:p-5 rounded-2xl shadow-lg mt-8">
 
-<ul className="flex flex-col md:flex-row gap-5 md:gap-20 text-xl">
+<ul className="flex flex-col md:flex-row gap-5 md:gap-10 lg:gap-20 text-xl">
 
   <li className="flex items-center gap-1 hover:border-b p-2">
   <CgMail size={30} className="text-white" />
