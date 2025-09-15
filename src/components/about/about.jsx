@@ -23,14 +23,14 @@ export default  function About() {
   ];
 
   return (
-    <section className="min-h-screen py-20" id="about">
+    <section className="py-28" id="about">
       <div className="mx-auto px-4">
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h1 
    className="bg-gradient-to-r from-primary to-white bg-clip-text text-transparent text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold inline-block"
@@ -39,14 +39,14 @@ export default  function About() {
   </h1>
         </motion.div>
 
-        <div className="flex flex-col justify-center items-center gap-10">
+        <div className="flex flex-col justify-center items-center gap-4">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6"
           >
-            <div className="prose prose-lg text-muted-foreground leading-relaxed">
+            <div>
               <p>
                 I'm <span className="text-primary font-semibold">Sayed</span>, a backend developer specialized in Laravel, 
                 with experience in building secure, scalable, and high performance server side applications.

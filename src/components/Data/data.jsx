@@ -81,7 +81,7 @@ export const Icons = [
 ];
   
   
-const webApps = [
+export const webApps = [
 
      {
         id: 1,
@@ -112,7 +112,6 @@ const webApps = [
     
 ]
 
-export default webApps;
 
 
 
