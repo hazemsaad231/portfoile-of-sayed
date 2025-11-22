@@ -60,7 +60,7 @@ function Contact() {
 
         {/* Contact Cards */}
         <div className="w-full max-w-5xl mt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-2">
             {contactItems.map((item, index) => (
               <a
                 key={item.id}
@@ -98,12 +98,12 @@ function Contact() {
 
         {/* Navigation Links */}
         <div className="mt-16 md:mt-24">
-          <nav className="flex flex-wrap justify-center gap-6 md:gap-10 text-lg md:text-xl">
+          <nav className="flex flex-wrap justify-center gap-2 md:gap-10 text-lg md:text-xl">
             {navLinks.map((link, index) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="relative group px-4 py-2 transition-all duration-300 hover:scale-110"
+                className="relative group px-2 py-2 transition-all duration-300 hover:scale-110"
                 style={{
                   animation: `fadeIn 0.8s ease-out ${index * 0.1 + 0.5}s both`
                 }}

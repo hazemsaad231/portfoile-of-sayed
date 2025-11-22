@@ -259,7 +259,7 @@ export default function Projects() {
                 <button
                   onClick={prevSlide}
                   disabled={currentSlide === 0}
-                  className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 rounded-full bg-slate-800/90 backdrop-blur-sm border border-slate-700 flex items-center justify-center transition-all ${
+                  className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 z-10 w-10 h-10 rounded-full bg-slate-800/90 backdrop-blur-sm border border-slate-700 flex items-center justify-center transition-all ${
                     currentSlide === 0
                       ? 'opacity-30 cursor-not-allowed'
                       : 'hover:bg-primary hover:border-primary'
@@ -272,7 +272,7 @@ export default function Projects() {
                 <button
                   onClick={nextSlide}
                   disabled={currentSlide === maxSlide}
-                  className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 rounded-full bg-slate-800/90 backdrop-blur-sm border border-slate-700 flex items-center justify-center transition-all ${
+                  className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 z-10 w-10 h-10 rounded-full bg-slate-800/90 backdrop-blur-sm border border-slate-700 flex items-center justify-center transition-all ${
                     currentSlide === maxSlide
                       ? 'opacity-30 cursor-not-allowed'
                       : 'hover:bg-primary hover:border-primary'
