@@ -142,7 +142,7 @@ export default function Projects() {
                       className="flex-shrink-0"
                       style={{ width: `calc(${100 / slidesPerView}% - ${(slidesPerView - 1) * 24 / slidesPerView}px)` }}
                     >
-                      <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 group h-full flex flex-col">
+                      <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 group flex flex-col">
                         {/* Image Section with Multiple Images */}
                         <div className="relative h-56 overflow-hidden bg-slate-900">
                           <AnimatePresence mode="wait">
