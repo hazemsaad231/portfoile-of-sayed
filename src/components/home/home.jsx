@@ -53,7 +53,7 @@ const Home = () => {
     </div>
 
 <div className='w-60 h-60 md:w-80 md:h-80'>
-  <img src="/sayed.jpg" alt="" className='object-center w-full h-full rounded-full'/>
+  <img src="/sayed.jpg" alt="" className='object-center w-full h-full rounded-full' loading='eager'/>
 </div>
 
 </div>
