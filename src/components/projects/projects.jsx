@@ -62,7 +62,7 @@ export default function Projects() {
 
   return (
     <section className="py-24 min-h-screen" id="projects">
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto p-3 md:p-8  max-w-7xl">
         {/* Header */}
         <div className="text-center w-full my-10">
 <h1 
@@ -122,7 +122,7 @@ export default function Projects() {
             {/* Slider Container */}
             <div className="overflow-hidden">
               <motion.div
-                className="flex gap-6"
+                className="flex gap-0 md:gap-4"
                 animate={{
                   x: `-${currentSlide * (100 / slidesPerView)}%`
                 }}
@@ -168,7 +168,7 @@ export default function Projects() {
                                   onClick={() => handleImageChange(project.id, idx)}
                                   className={`w-2 h-2 rounded-full transition-all ${
                                     idx === activeImageIndex 
-                                      ? 'bg-blue-500 w-6' 
+                                      ? 'bg-primary w-6' 
                                       : 'bg-white/50 hover:bg-white/75'
                                   }`}
                                   aria-label={`View image ${idx + 1}`}
@@ -201,7 +201,7 @@ export default function Projects() {
                           {/* Expand Button */}
                           <button
                             onClick={() => handleExpandClick(project.id)}
-                            className="mt-4 flex items-center justify-center gap-2 text-slate-400 hover:text-blue-400 transition-colors text-sm"
+                            className="mt-4 flex items-center justify-center gap-2 text-slate-400 hover:text-primary transition-colors text-sm"
                           >
                             <span>Details</span>
                             <motion.div
@@ -262,7 +262,7 @@ export default function Projects() {
                   className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 rounded-full bg-slate-800/90 backdrop-blur-sm border border-slate-700 flex items-center justify-center transition-all ${
                     currentSlide === 0
                       ? 'opacity-30 cursor-not-allowed'
-                      : 'hover:bg-blue-600 hover:border-blue-500'
+                      : 'hover:bg-primary hover:border-primary'
                   }`}
                   aria-label="Previous slide"
                 >
